@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card light-blue darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><%= show.name %></span>
+          <div class="row">
+              <% if(show.image) { %>
+              <div class="col s6"><img src="<%= show.image.medium %>" alt=""></div>
+              <% } %>
+              <div class="col s6"><%- show.summary %></div>
+          </div>
+        </div>
+        <div class="card-action light-blue darken-4">
+          <a href="<%= show.url %>" class="white-text">URL</a>
+          <span class="white-text">Language: <%= show.language %></span>
+        </div>
+      </div>
+    </div>
+  </div>

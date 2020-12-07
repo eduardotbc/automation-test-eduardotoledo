@@ -1,0 +1,9 @@
+<%- include('../header'); %>
+<h2>Search results:</h2>
+<a class="btn btn-primary" href="/shows"><i class="material-icons left">keyboard_arrow_left</i>Back</a>
+<% if (shows) { %>
+    <% shows.forEach((show) => { %>
+        <%- include('show-mini', { show: show.show }); %>
+    <% }); %>
+<% } %>
+<%- include('../footer'); %>

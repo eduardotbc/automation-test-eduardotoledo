@@ -1,0 +1,15 @@
+<%- include('../header'); %>
+<div class="row">
+    <div class="input-field col s12">
+        <form action="/shows/search" method="post">
+            <input type="text" placeholder="Search" name="search" class="validate">
+            <% if( locals.errors ) {%>
+                <span class="helper-text" data-error="wrong" data-success="right"><%= errors.message %></span>
+            <% } %>
+            <button class="btn waves-effect waves-light" type="submit">Search
+                <i class="material-icons right">search</i>
+            </button>
+        </form>
+    </div>
+</div>
+<%- include('../footer'); %>
